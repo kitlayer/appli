@@ -1,0 +1,1 @@
+import{u as r}from"./q-B910zlbq.js";import{f as p}from"./q-B910zlbq.js";const c=e=>{const[o,t,a,l]=r();if(!t.value||!o.value)return;console.log("Mouse move:",e.pageX),e.preventDefault();const s=(e.pageX-o.value.offsetLeft-l.value)*1.5;o.value.scrollLeft=a.value-s};export{p as _hW,c as s_Lu7yaNlFQWA};

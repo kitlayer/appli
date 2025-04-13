@@ -1,0 +1,1 @@
+import{u as s}from"./q-B910zlbq.js";import{f as n}from"./q-B910zlbq.js";const u=t=>{const[e,o,a,l]=s();e.value&&(console.log("Touch start:",t.touches[0].pageX),o.value=!0,l.value=t.touches[0].pageX-e.value.offsetLeft,a.value=e.value.scrollLeft)};export{n as _hW,u as s_3lmg2y8vy0Q};

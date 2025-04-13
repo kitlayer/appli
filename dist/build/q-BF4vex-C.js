@@ -1,0 +1,1 @@
+import{u as r}from"./q-B910zlbq.js";import{f as c}from"./q-B910zlbq.js";const u=o=>{const[e,t,a,l]=r();e.value&&(console.log("Mouse down:",o.pageX),t.value=!0,l.value=o.pageX-e.value.offsetLeft,a.value=e.value.scrollLeft)};export{c as _hW,u as s_DFZepFKS6Vo};

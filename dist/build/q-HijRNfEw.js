@@ -1,0 +1,1 @@
+import{f as l}from"./q-B910zlbq.js";const n=()=>{console.log("Hero component is visible on client");const e=document.getElementById("badge-section"),o=document.querySelector("header");console.log("Badge-section on Hero load:",e),console.log("Header on Hero load:",o)};export{l as _hW,n as s_HX9TLAq21t8};
