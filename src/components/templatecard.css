@@ -1,0 +1,200 @@
+/* TemplateCards Konteyneri */
+.templatecards-container {
+  background-color: #0f0f0f;
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-family: 'Circular', sans-serif;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* TemplateCard Link */
+.templatecard-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: calc(33.333% - 16px); /* 3 kart yan yana, 20px gap */
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+/* TemplateCard */
+.templatecard {
+  background-color: #171717;
+  border-radius: 12px;
+  width: 100%; /* Link wrapper genişliği kontrol eder, kart içerde tam sığar */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.templatecard:hover {
+  background-color: #262626;
+}
+
+.templatecard:hover .arrow-icon {
+  stroke: #ffffff;
+}
+
+/* Arka Plan Görseli */
+.templatecard-background {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: relative; /* Rozet için */
+}
+
+/* Rozet */
+.templatecard-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.templatecard-badge.free {
+  background-color: #dcfce7;
+  color: #134e4a;
+}
+
+.templatecard-badge.premium {
+  background-color: #ffedd5;
+  color: #7c2d12;
+}
+
+/* TemplateCard İçeriği */
+.templatecard-content {
+  margin-top: 8px;
+  padding: 0.6rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Metin Kapsayıcı */
+.templatecard-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Başlık */
+.templatecard-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Açıklama */
+.templatecard-description {
+  font-size: 1rem;
+  color: #888888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Yuvarlak Buton */
+.templatecard-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #333333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.templatecard-arrow:hover {
+  background-color: #545353;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+  .templatecard-link-wrapper {
+    width: calc(50% - 10px); /* 2 kart yan yana */
+  }
+  .templatecard-background {
+    height: 160px;
+  }
+  .templatecards-container {
+    padding: 1.4rem;
+  }
+
+}
+
+/* Responsive Tasarım */
+@media (max-width: 700px) {
+
+ /* Başlık */
+ .templatecard-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+}
+
+@media (max-width: 600px) {
+  .templatecard-link-wrapper {
+    width: 100%; /* 1 kart */
+    min-width: 100%;
+  }
+  .templatecard-background {
+    height: 150px;
+  }
+  .templatecard-content {
+    margin-top: 10px;
+  }
+
+  .templatecards-container {
+    padding: 1.3rem;
+  }
+
+}
+
+@media (max-width: 345px) {
+  .templatecard-link-wrapper {
+    width: 100%; /* 1 kart */
+    min-width: 100%;
+  }
+  .templatecard-background {
+    height: 150px;
+  }
+  .templatecard-content {
+    margin-top: 10px;
+  }
+
+  .templatecards-container {
+    padding: 1.2rem;
+  }
+
+  /* Başlık */
+  .templatecard-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Yuvarlak Buton */
+.templatecard-arrow {
+  width: 32px;
+  height: 32px;
+}
+
+
+}

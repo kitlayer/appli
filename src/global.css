@@ -1,0 +1,15 @@
+/* Varsayılan stilleri sıfırla */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Varsayılan yazı tipi */
+  }
+  
+  /* Diğer global stiller */
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+

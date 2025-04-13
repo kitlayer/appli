@@ -1,0 +1,145 @@
+.cards-container {
+  background-color: #0F0F0F;
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem; /* Tüm yönlerde 40px (2.5rem) */
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex-wrap: wrap;
+  font-family: 'Circular', sans-serif;
+}  .cards-container::-webkit-scrollbar {
+  display: none;
+}  .card {
+  background-color: #171717;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding:  1.3rem 1.3rem 1rem 1.3rem; /* Kart içi padding 24px (1.5rem) */
+  width: calc(25% - 18px); /* Ekran genişliğinin 1/4'ü, padding ve gap hesaba katılarak */
+  min-width: 280px; /* Minimum genişlik */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden; /* Taşan metni gizleme, görünür yap */
+  text-decoration: none; /* Linkin alt çizgisini kaldır */
+  color: inherit; /* Linkin rengini miras al */
+  transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+}  .card:hover {
+  background-color: #1e1e1e; /* Hover'da arka plan rengini değiştir */
+}  .card:hover .card-link svg {
+  stroke: #ffffff; /* Hover'da arrow'un rengini beyaz yap */
+}  .card-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #3c3c3c; /* Placeholder için */
+  margin-bottom: 0.5rem;
+}  .card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #D3D3D3;
+  margin: 0;
+  margin-bottom: 0.1rem;
+}  .card-description {
+  font-size: 0.9rem;
+  color: #9e9e9e;
+  margin: 0;
+  line-height: 1.4; /* Satır yüksekliği */
+  overflow-wrap: break-word; /* Metni kelime seviyesinde kırarak alt satıra geçmesini sağlar */
+  word-break: break-word; /* Daha güçlü kelime kırma */
+  display: block; /* Normal blok eleman */  
+  margin-bottom: 0.4rem;
+}  .card-divider {
+  width: calc(100% + 3rem); /* Kartın tam genişliği + padding'ler (1.5rem + 1.5rem) */
+height: 1px;
+background-color: #222222; /* Border rengi */
+margin: 0 -1.5rem; /* Padding'leri telafi etmek için negatif margin */
+}  .card-footer {
+  display: flex;
+  align-items: center; /* Badge'ler ve arrow aynı hizada */
+  justify-content: space-between; /* Badge'ler sola, arrow sağa */
+  margin-top: 0rem; /* Divider ile footer arasındaki boşluk */
+}  .card-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}  .card-badge {
+  background-color: #252525;
+  color: #9a9a9a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}  .card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888888;
+  font-size: 1rem;
+}  /* Responsive tasarım */
+@media (max-width: 1200px) {
+  .card {
+    width: calc(33% - 10px); /* Ekran genişliğinin 1/3'ü, padding ve gap hesaba katılarak */
+    min-width: 280px;
+  }
+
+.card-description {
+  font-size: 0.85rem;
+  max-width: 240px;
+}
+
+}  @media (max-width: 1093px) {
+  .card {
+      width: calc(50% - 10px);  /* Ekran genişliğinin yarısı, padding ve gap hesaba katılarak */
+    min-width: 280px;
+  }
+  .cards-container{
+      padding: 16px;
+  }
+  .card-description {
+      max-width: 280px;
+    }
+}  @media (max-width: 630px) {
+  .card {
+    width: 100%; /* Ekranın tamamı, padding hesaba katılarak */
+    min-width: 280px;
+  }
+
+.card-title {
+font-size: 1.1rem;
+}
+
+.card-description {
+font-size: 0.85rem;
+max-width: 400px;
+}
+
+.card-badge {
+font-size: 0.75rem;
+padding: 0.25rem 0.6rem;
+}
+
+}  @media (max-width: 400px) {
+  .card {
+      width: 100%; /* Ekranın tamamı, padding hesaba katılarak */
+    min-width: 240px;
+  }
+
+.card-title {
+font-size: 1rem;
+}
+
+.card-description {
+font-size: 0.8rem;
+max-width: 280px;
+}
+
+}
+

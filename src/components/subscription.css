@@ -1,0 +1,106 @@
+/* Subscription.css */
+.subscription-section {
+    background-color: #121212; /* Kartlar bölümüyle aynı arka plan rengi */
+    padding: 2.5rem; /* Tüm yönlerde 40px (2.5rem), kartlar bölümüyle aynı */
+    text-align: center; /* İçerikleri ortala */
+    border-top: 1px solid #2E2E2E; /* Üst border, kartların border rengiyle uyumlu */
+    font-family: 'Circular', sans-serif;
+  }
+  
+  .subscription-title {
+    font-size: 2rem; /* Başlık boyutu */
+    font-weight: 500;
+    color: #FAFAFA; /* Beyaz başlık */
+    margin: 0 0 1rem 0; /* Alt boşluk */
+    max-width: 600px;
+    margin-left: auto; /* Ortalamak için */
+    margin-right: auto; /* Ortalamak için */
+   line-height: 1.4; /* Satır yüksekliği */
+   white-space: normal; /* Metnin doğal olarak kırılmasını sağla */
+  }
+  
+  .subscription-description {
+    font-size: 1.1rem; /* Açıklama boyutu */
+    color: #777676; /* Kartların açıklama rengiyle aynı */
+    font-weight: 400;
+    margin: 0 0 1.5rem 0; /* Alt boşluk */
+    max-width: 600px;
+    margin-left: auto; /* Ortalamak için */
+    margin-right: auto; /* Ortalamak için */
+   line-height: 1.5; /* Satır yüksekliği */
+   white-space: normal; /* Metnin doğal olarak kırılmasını sağla */
+  }
+  
+  .subscription-form {
+    display: flex;
+    justify-content: center; /* Form elemanlarını ortala */
+    gap: 1rem; /* Input ve buton arasındaki boşluk */
+    max-width: 500px; /* Formun maksimum genişliği */
+    margin: 0 auto; /* Ortalamak için */
+  }
+  
+  .subscription-input {
+    background-color: #121212; /* Kartlarla aynı arka plan rengi */
+    border: 1px solid #2E2E2E; /* Kartlarla aynı border rengi */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    padding: 0.75rem 1rem; /* İç boşluk */
+    font-size: 1rem;
+    color: #898989; /* Beyaz metin */
+    flex: 1; /* Input alanı esnek genişlikte */
+    outline: none; /* Varsayılan outline'ı kaldır */
+    font-weight: 200;
+  }
+  
+  .subscription-input::placeholder {
+    color: #a4a4a4; /* Placeholder rengi */
+  }
+  
+  .subscription-button {
+    background-color: #232323; /* Kartların badge'leriyle aynı arka plan */
+    border: none;
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    padding: 0.75rem 1.5rem; /* İç boşluk */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #d1d5db; /* Kartların badge metin rengiyle aynı */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+  }
+  
+  .subscription-button:hover {
+    background-color: #313131; /* Hover'da daha açık renk */
+  }
+  
+  /* Responsive tasarım */
+  @media (max-width: 600px) {
+    .subscription-form {
+      flex-direction: column; /* Küçük ekranlarda input ve buton alt alta */
+      gap: 0.75rem;
+    }
+  
+    .subscription-input {
+      width: 100%; /* Input alanı tam genişlikte */
+    }
+  
+    .subscription-button {
+      width: 100%; /* Buton tam genişlikte */
+    }
+  
+    .subscription-title {
+      font-size: 1.5rem;
+    }
+  
+    .subscription-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .subscription-title {
+      font-size: 1.25rem;
+    }
+  
+    .subscription-description {
+      font-size: 0.85rem;
+    }
+  }

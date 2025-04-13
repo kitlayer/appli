@@ -1,0 +1,105 @@
+/* Footer.css */
+.footer {
+    background-color: #0F0F0F; /* Kartlar ve mail aboneliği bölümüyle aynı arka plan */
+    padding: 1rem 2.5rem; /* Üst ve alt 24px, yanlar 40px */
+    border-top: 1px solid #2E2E2E; /* Üst border, mail aboneliği bölümüyle uyumlu */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Sol ve sağ tarafları ayır */
+    align-items: center; /* Dikeyde ortala */
+    margin: 0 auto; /* Ortalamak için */
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center; /* Elemanları dikeyde ortala */
+    gap: 0.75rem; /* Elemanlar arasında boşluk */
+    flex-wrap: wrap; /* Küçük ekranlarda bağlantılar alt satıra geçebilir */
+  }
+  
+  .footer-copyright {
+    font-size: 0.9rem;
+    color: #888888; /* Kartların açıklama metniyle aynı renk */
+    margin: 0;
+  }
+  
+  .footer-divider {
+    font-size: 0.8rem;
+    color: #888888; /* Aynı renk */
+    margin: 0;
+  }
+  
+  .footer-link {
+    font-size: 0.8rem;
+    color: #888888; /* Kartların açıklama metniyle aynı renk */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    transition: color 0.3s ease; /* Hover efekti için geçiş */
+  }
+  
+  .footer-link:hover {
+    color: #d1d5db; /* Hover'da kartların badge metin rengi */
+  }
+  
+  .footer-socials {
+    display: flex;
+    gap: 0.75rem; /* Sosyal medya ikonları arasında boşluk */
+  }
+  
+  .footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 50%; /* Yuvarlak ikonlar */
+    transition: background-color 0.3s ease; /* Hover efekti için geçiş */
+  }
+  
+  .footer-social-link:hover {
+    background-color: #27272a; /* Hover'da kartların badge rengi */
+  }
+  
+  .footer-social-link svg {
+    stroke: #888888; /* İkon rengi */
+  }
+  
+  /* Responsive tasarım */
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column; /* Küçük ekranlarda elemanlar alt alta */
+      gap: 1rem; /* Elemanlar arasında boşluk */
+      text-align: center; /* Metni ortala */
+    }
+  
+    .footer-left {
+      justify-content: center; /* Bağlantıları ortala */
+      gap: 0.5rem; /* Daha küçük boşluk */
+    }
+  
+    .footer-copyright,
+    .footer-divider,
+    .footer-link {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .footer-copyright,
+    .footer-divider,
+    .footer-link {
+      font-size: 0.8rem;
+    }
+  
+    .footer-social-link {
+      width: 28px;
+      height: 28px;
+    }
+  
+    .footer-social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+  }

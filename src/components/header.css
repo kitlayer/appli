@@ -1,0 +1,285 @@
+/* Header */
+header {
+  background: #131313;
+  color: white;
+  border-bottom: 1px solid #2E2E2E;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+}
+
+/* Header Content */
+.header-content {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Left Section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  color: #2ecc71;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Circular', sans-serif;
+}
+
+/* Navigation */
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 16px;
+}
+
+.nav a {
+  color: #B4B4B4;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Circular', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+.nav a.active {
+  color: #ffffff;
+}
+
+/* Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #1C1C1C;
+  border: 1px solid #2E2E2E;
+  border-radius: 5px;
+  padding: 0 5px 0 10px;
+  height: 36px;
+  width: 200px;
+}
+
+.search-icon {
+  color: #4D4D4D;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: none;
+  color: #b1b1b1;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  font-family: 'Circular', sans-serif;
+}
+
+.search-input::placeholder {
+  color: #5c5b5b;
+}
+
+.shortcut-icon {
+  color: #848484;
+  font-size: 12px;
+  background: #292929;
+  padding: 5px 8px;
+  border-radius: 3px;
+  margin-left: 2px;
+  font-family: 'Circular', sans-serif;
+}
+
+/* Sign Up Button */
+.sign-up {
+  background: #121212;
+  color: #d1d5db;
+  border: 1px solid #2E2E2E;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Circular', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow-icon {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+.sign-up:hover {
+  background: #333;
+  color: white;
+}
+
+.sign-up:hover .arrow-icon {
+  color: white;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: #131313;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (min-width: 1000px) {
+  header {
+    height: 55px;
+    padding: 0 40px;
+  }
+
+  /* Masaüstü görünümde mobil Submit butonunu gizle */
+  .mobile-sign-up {
+    display: none !important;
+  }
+
+  /* Masaüstü görünümde menü içindeki arama çubuğunu gizle */
+  .mobile-search-bar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    height: 52px;
+    padding: 0 16px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .nav {
+    display: none;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #131313;
+    border-bottom: none;
+    z-index: 999;
+    overflow-y: auto;
+  }
+  
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 52px);
+    padding: 10px 20px;
+  }
+  
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 10px; /* Arama çubuğu ile menü öğeleri arasında 10px boşluk */
+    width: 100%;
+    text-align: left;
+  }
+  
+  .nav li {
+    margin: 8px 0;
+  }
+  
+  .nav a {
+    display: block;
+    padding: 8px 0;
+    color: #B4B4B4;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #ffffff;
+  }
+  
+  /* Mobil görünümde menü içindeki arama çubuğu */
+  .mobile-search-bar {
+    display: flex !important; /* Menü içinde görünür */
+    width: 100%; /* Tam genişlik */
+    margin-bottom: 0; /* Alt boşluğu kaldırdık, .nav ul ile eşitlemek için */
+  }
+  
+  /* Mobil görünümde Submit butonu */
+  .mobile-sign-up {
+    display: flex !important;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .search-bar {
+    display: none; /* Header'daki arama çubuğunu gizle */
+  }
+  
+  .sign-up {
+    display: none; /* Header'daki Submit butonunu gizle */
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-text {
+    font-size: 16px;
+  }
+}

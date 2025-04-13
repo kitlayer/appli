@@ -1,0 +1,259 @@
+/* Hero Bölümü */
+.hero {
+    background-color: #0f0f0f;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 4rem;
+    font-family: 'Circular', sans-serif;
+    border-bottom: 1px solid #2e2e2e;
+    font-family: 'Circular', sans-serif;
+  }
+  
+  /* Destek Konteyneri */
+  .hero-support-container {
+    display: flex;
+    align-items: center;
+    background-color: #1C1C1C;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.3rem;
+  }
+  
+  .hero-support-images {
+    display: flex;
+    margin-right: 0.5rem;
+  }
+  
+  .support-image {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: -10px;
+    border: 1.5px solid #2E2E2E;
+  }
+  
+  .support-image:last-child {
+    margin-right: 0;
+  }
+  
+  .hero-support-text {
+    font-size: 0.9rem;
+    color: #888888;
+  }
+  
+  /* Hero İçeriği */
+  .hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fafafa;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+    max-width: 800px;
+    font-weight: 500;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #898989;
+    line-height: 1.5;
+    margin: 0 0 1.6rem;
+    max-width: 800px;
+  }
+  
+  /* Düğmeler */
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 3.4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary {
+    background-color: #0f0f0f;
+    color: #d3d3d3;
+    border: 1px solid #2e2e2e;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #3f3f46;
+  }
+  
+  /* Responsive Tasarım */
+  
+  /* 1000px ve altı */
+  @media (max-width: 1000px) {
+    .hero {
+      min-height: 85vh;
+      padding: 2rem 2rem;
+    }
+  
+    .hero-description {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.9rem 2.8rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+  }
+  
+  /* 768px ve altı */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 75vh;
+      padding: 1.7rem 1.7rem;
+    }
+  
+    .hero-title {
+      font-size: 2.56rem;
+      line-height: 1.5;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-description {
+      font-size: 1rem; /* 2rem çok büyük, düzeltildi */
+      line-height: 1.5;
+      font-weight: 400;
+      margin-bottom: 1.6rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 0.8rem 2.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+  
+    .hero-support-container {
+      padding: 0.5rem 0.75rem;
+    }
+  
+    .hero-support-images {
+      margin-right: 0.5rem;
+    }
+  
+    .support-image {
+      width: 20px;
+      height: 20px;
+      margin-right: -8px;
+    }
+
+  }
+  
+  /* 576px ve altı */
+  @media (max-width: 576px) {
+    .hero {
+      min-height: 65vh;
+      padding: 1.5rem 1.4rem;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.5;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-description {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-support-text {
+      font-size: 0.9rem;
+    }
+  
+    .hero-support-container {
+      padding: 0.4rem 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .hero-support-images {
+      margin-right: 0.4rem;
+    }
+  
+    .support-image {
+      width: 18px;
+      height: 18px;
+      margin-right: -6px;
+    }
+  
+    .btn {
+      padding: 0.8rem 2.6rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+  
+  /* 400px ve altı */
+  @media (max-width: 400px) {
+    .hero {
+      min-height: 50vh;
+      padding: 1.5rem 1.5rem;
+    }
+  
+    .hero-title {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+  
+    .hero-description {
+      font-size: 0.75rem;
+      line-height: 1.5;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-support-text {
+      font-size: 0.8rem;
+    }
+  
+    .hero-support-container {
+      padding: 0.3rem 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-support-images {
+      margin-right: 0.3rem;
+    }
+  
+    .support-image {
+      width: 16px;
+      height: 16px;
+      margin-right: -5px;
+    }
+  
+    .btn {
+      padding: 0.6rem 2rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }

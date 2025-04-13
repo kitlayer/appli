@@ -1,0 +1,42 @@
+.badge-container {
+  background-color: #0F0F0F;
+  padding: 1.2rem 2.5rem 0rem 2.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: 'Circular', sans-serif;
+}  .badge-container::-webkit-scrollbar {
+  display: none;
+}  .badge-container:active {
+  cursor: grabbing;
+}  .badge {
+  background-color: #1C1C1C;
+  color: #717171;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  border: 1px solid #2E2E2E;
+}  .badge:hover {
+  background-color: #2E2E2E;
+  color: #ffffff;
+}  .badge.active {
+  background-color: #303030;
+  color: #ffffff;
+  border-color: #ffffff;
+}  @media (max-width: 993px) {
+  .badge-container {
+    padding: 1.2rem 1.2rem 0.2rem 1.3rem;
+  }
+}
+
